@@ -1,0 +1,15 @@
+name: Enve Demo
+
+on: push
+
+jobs:
+    enve-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Predefined env
+              run: echo " Repo name is $GITHUB_REPOSITORY"
+
+            - name: Set and print custom env
+              run: 
+                MNAME="Pradeep"
+                echo "My Name if $MNAME"
