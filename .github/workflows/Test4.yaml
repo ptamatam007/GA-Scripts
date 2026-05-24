@@ -1,0 +1,22 @@
+name: Operations in Github
+
+on: workflow_dispatch
+
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create a txt file
+              run: echo "This 4th github action file" > devops4.txt
+
+            - name: Display the content in file
+              run: cat devops4.txt
+
+            - name: Display the date
+              run: date
+
+            - name: Display the files and directeries
+              run: ls -lrth
+
+            - name: Displaye the present working directory
+              run: pwd
