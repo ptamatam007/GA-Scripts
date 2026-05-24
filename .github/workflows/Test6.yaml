@@ -1,0 +1,16 @@
+name: File Operations New
+
+on: workflow_dispatch
+
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create file
+              run: echo "Hi Pradeep" > github.txt
+
+            - name: Display data in file
+              run: cat github.txt
+
+            - name: List directery
+              run: la -l
