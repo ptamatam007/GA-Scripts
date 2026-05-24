@@ -16,7 +16,7 @@ jobs:
               run: date
 
             - name: display files and dirs
-              run: la -lrth
+              run: ls -lrth
 
             - name: display the present location
               run: pwd
