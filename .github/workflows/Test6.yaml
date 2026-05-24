@@ -13,4 +13,4 @@ jobs:
               run: cat github.txt
 
             - name: List directery
-              run: la -l
+              run: ls -l
