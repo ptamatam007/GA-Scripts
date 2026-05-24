@@ -1,0 +1,20 @@
+name: Muli step workflow
+
+on: workflow_dispatch
+
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step1 - pwd
+              run: pwd
+
+            - name: step2 - whoami
+              run: whoami
+
+            - name: Step3 - Syatem date
+              run: date
+
+            - name: Step4 - Disk usage
+              run: df -h
+        
