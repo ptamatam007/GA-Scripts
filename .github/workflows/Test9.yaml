@@ -1,0 +1,13 @@
+name: Strings Demo
+
+on: push
+
+jobs:
+    StringsDemo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Convert to upper case
+              run: echo "Pradeep reddy" | tr 'a-z' 'A-Z'
+
+            - name: Word Count
+              run: echo "Github actons demo" | wc -w
