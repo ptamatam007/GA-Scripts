@@ -1,0 +1,16 @@
+name: Multiline execution using Pipeline
+
+on: workflow_dispatch
+
+jobs:
+    multiline:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the code
+              uses: actions/checkout@v5
+            - name: display the content
+              run: |
+               cat devops.txt
+               date
+               chmod +x uptime.sh
+               ./uptime.sh
