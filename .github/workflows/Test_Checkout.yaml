@@ -14,4 +14,6 @@ jobs:
 
             - name: display the date
               run: date
-        
+            
+            - name: Execute the shell script
+              run: ./uptime.sh
