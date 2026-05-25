@@ -1,0 +1,17 @@
+name: Checkout the code and display the data in file
+
+on: workflow_dispatch
+
+jobs:
+    checkoutDemo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the code
+              uses: actions/checkout@v5
+
+            - name: display the content of the file
+              run: cat devops.txt
+
+            - name: display the date
+              run: date
+        
