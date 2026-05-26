@@ -15,3 +15,13 @@ jobs:
         steps:
             - name: Job2 step
               run: echo "This is Job2 Running"
+    job3:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Job3 step
+              run: echo "This is job3 "
+    job4:
+        runs-on: ubuntu-latest
+        steps:
+            - name: This job 4 step
+              run: echo "This is Job4"
