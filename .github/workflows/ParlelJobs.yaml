@@ -1,0 +1,17 @@
+name: parllell jobs run
+
+on: 
+    workflow_dispatch: 
+
+jobs:
+    jobs1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Job1 step
+              run: echo "This is job1 running"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Job2 step
+              run: echo "This is Job2 Running"
