@@ -1,4 +1,4 @@
-name: Jobs execting by order using need option
+name: Jobs execting by Sequential order using need option
 
 on: workflow_dispatch
 
