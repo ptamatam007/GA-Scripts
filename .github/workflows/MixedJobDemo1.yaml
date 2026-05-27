@@ -1,0 +1,34 @@
+name: deployment of application demo
+
+on: workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Buils application
+              run: echo "building the application"
+    lint:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: running sonarqube reports
+              run: echo "running sonar"
+    test:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: Running unit tests
+              run: echo "Running unit tests"
+    integrations-tests:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: running integration tests
+              run: echo "integration tests"
+    deploy:
+        runs-on: ubuntu-latest
+        needs: [test,integrations-tests]
+        steps:
+            - name: deploying application
+              run: echo "Application deployed successfully"
